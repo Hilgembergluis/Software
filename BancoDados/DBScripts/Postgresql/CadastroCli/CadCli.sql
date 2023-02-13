@@ -1,0 +1,226 @@
+CREATE DATABASE  CadastroCliente;
+
+CREATE TABLE TBLCliente01 (
+  CodigoCliente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Nomecliente VARCHAR(60) NULL,
+  DataNascimento DATE NULL,
+  Mae VARCHAR(60) NULL,
+  Pai VARCHAR(60) NULL,
+  CodigoTpGenero INTEGER UNSIGNED NOT NULL,
+  TipoPessoa INTEGER UNSIGNED NOT NULL,
+  CidadeNascimento VARCHAR(50) NULL,
+  EstadoNascimento INTEGER UNSIGNED NULL,
+  CodigoDocumento INTEGER UNSIGNED NOT NULL,
+  EstadoCivil INTEGER UNSIGNED NULL,
+  CodigoEndereço INTEGER UNSIGNED NULL,
+  CodigoConjugue INTEGER UNSIGNED NULL,
+  CodigoRegCasamento INTEGER UNSIGNED NULL,
+  CodigoRenda INTEGER UNSIGNED NULL,
+  CodigoTelefone INTEGER UNSIGNED NULL,
+  CodigoSerasa INTEGER UNSIGNED NULL,
+  CodigoCadBens INTEGER UNSIGNED NULL,
+  CodigoTpAss INTEGER UNSIGNED NULL,
+  CodigoStatus INTEGER UNSIGNED NULL,
+  CodigoConfigStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoCliente)
+);
+
+CREATE TABLE TblTipoPessoa02 (
+  CodigoTipoPessoa INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoPessoa VARCHAR(20) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTipoPessoa)
+);
+
+CREATE TABLE TblTipoGenero03 (
+  CodigoGenero INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoGenero VARCHAR(30) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoGenero)
+);
+
+CREATE TABLE TblEstadoCivil04 (
+  CodigoEstadoCivil INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoEstadoCivil VARCHAR(30) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoEstadoCivil)
+);
+
+CREATE TABLE TblRegimeCasamento05 (
+  CodigoRegimeCasamento INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoRegimeCasamento VARCHAR(50) NULL,
+  TipoAssinaturaCasamento INTEGER UNSIGNED NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoRegimeCasamento)
+);
+
+CREATE TABLE TblTipoDocumento06 (
+  CodigoTipoDocumento INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoDocumento VARCHAR(20) NULL,
+  OrgaoEmissor VARCHAR(30) NOT NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTipoDocumento)
+);
+
+CREATE TABLE TblTipoRenda07 (
+  CodigoTipoRenda INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoTipoRenda VARCHAR(30) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTipoRenda)
+);
+
+CREATE TABLE TblRenda08 (
+  CodigoRenda INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  CodigoCliente INTEGER UNSIGNED NULL,
+  StatusRenda INTEGER UNSIGNED NULL,
+  TipoRenda INTEGER UNSIGNED NULL,
+  ValorRenda FLOAT NULL,
+  DataCadastro DATETIME NULL,
+  DataAtualizacao DATETIME NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoRenda)
+);
+
+CREATE TABLE TblTipoTelefone09 (
+  CodigoTipoTelefone INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoTipoTelefone VARCHAR(20) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTipoTelefone)
+);
+
+CREATE TABLE TblTelefone10 (
+  CodigoTelefone INTEGER UNSIGNED NOT NULL,
+  CodigoCliente INTEGER UNSIGNED NULL,
+  TipoTelefone INTEGER UNSIGNED NULL,
+  StatusTelefone INTEGER UNSIGNED NULL,
+  NumTelefone VARCHAR(11) NULL,
+  DataAtualizacao DATETIME NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTelefone)
+);
+
+CREATE TABLE TblFederacao11 (
+  CodigoFederacao INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoFederacao VARCHAR(30) NULL,
+  UFFederacao VARCHAR(2) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoFederacao)
+);
+
+CREATE TABLE TblTipoEndereço12 (
+  CodigoTipoEndereco INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoEndereco VARCHAR(20) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTipoEndereco)
+);
+
+CREATE TABLE TBLEndereco13 (
+  CodigoEndereco INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  CodigoCliente INTEGER UNSIGNED NULL,
+  TipoEndereco INTEGER UNSIGNED NULL,
+  CEP VARCHAR(8) NULL,
+  TipoLogradouro VARCHAR(30) NULL,
+  NomeLogradouro VARCHAR(50) NULL,
+  Bairro VARCHAR(60) NULL,
+  Cidade VARCHAR(60) NULL,
+  CodigoUF INTEGER UNSIGNED NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoEndereco)
+);
+
+CREATE TABLE TblConjugue14 (
+  CodigoConjugue INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  CodigoClienteRelacionado INTEGER UNSIGNED NULL,
+  Nome VARCHAR(60) NULL,
+  DataNascimento DATE NULL,
+  CodigoDocumento INTEGER UNSIGNED NULL,
+  TipoPessoa INTEGER UNSIGNED NULL,
+  Pai VARCHAR(60) NULL,
+  Mae VARCHAR(60) NULL,
+  CodigoEstado INTEGER UNSIGNED NULL,
+  CidadeNascimento VARCHAR(50) NULL,
+  EstadoCivil INTEGER UNSIGNED NULL,
+  TipoRegimeCasamento INTEGER UNSIGNED NULL,
+  Telefones INTEGER UNSIGNED NULL,
+  Renda INTEGER UNSIGNED NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoConjugue)
+);
+
+CREATE TABLE TblSerasa15 (
+  CodigoSerasa INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  CodigoCliente INTEGER UNSIGNED NULL,
+  DataConsultaSerasa DATETIME NULL,
+  ScorSerasa INTEGER UNSIGNED NULL,
+  Protesto INTEGER UNSIGNED NULL,
+  ChequesDevolvidos INTEGER UNSIGNED NULL,
+  Endividamento INTEGER UNSIGNED NULL,
+  CapacidadePagamento FLOAT NULL,
+  StatusConsulta INTEGER UNSIGNED NULL,
+  TotalEmAtraso INTEGER UNSIGNED NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoSerasa)
+);
+
+CREATE TABLE TblTipoBens16 (
+  CodigoTipoBens INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoTipoBens VARCHAR(30) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoTipoBens)
+);
+
+CREATE TABLE TblCadastroBensCliente17 (
+  CodigoCadastroBensCliente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  CodigoCliente INTEGER UNSIGNED NULL,
+  CodigoBem INTEGER UNSIGNED NULL,
+  AnoFabricacao VARCHAR NULL,
+  AnoModelo INTEGER UNSIGNED NULL,
+  ChasiBem VARCHAR NULL,
+  PlacaBem VARCHAR(10) NULL,
+  StatusBem INTEGER UNSIGNED NULL,
+  DataCompra DATE NULL,
+  LocalizacaoBem VARCHAR(60) NULL,
+  LogradouroBem VARCHAR(60) NULL,
+  TipoLogradouro VARCHAR(60) NULL,
+  TamanhoAreaBem FLOAT NULL,
+  ValorBem FLOAT NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NOT NULL,
+  PRIMARY KEY(CodigoCadastroBensCliente)
+);
+
+CREATE TABLE TblAtualizacaoBens18 (
+  CodigoAtualizacaoBens INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  CodigoBem INTEGER UNSIGNED NULL,
+  DataAtualizacao DATETIME NULL,
+  ValorAtualBem FLOAT NULL,
+  StatusBem INTEGER UNSIGNED NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoAtualizacaoBens)
+);
+
+CREATE TABLE TblTipoAssinatura19 (
+  CodigotipoAssinatura INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoTipoAssinatura VARCHAR(30) NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigotipoAssinatura)
+);
+
+CREATE TABLE TblDocumentos20 (
+  CodigoDocumento INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  NumeroDocumento VARCHAR(15) NULL,
+  TipoDocumento INTEGER UNSIGNED NULL,
+  CodigoOrgaoEmissor INTEGER UNSIGNED NULL,
+  CodigoCliente INTEGER UNSIGNED NULL,
+  DataAtualizacao DATETIME NULL,
+  DataCadastro DATETIME NULL,
+  CodigoStatus INTEGER UNSIGNED NULL,
+  CodigoVinculoStatus INTEGER UNSIGNED NULL,
+  PRIMARY KEY(CodigoDocumento)
+);
+
+CREATE TABLE TblStatus21 (
+  CodigoStatus INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  DescricaoStatus VARCHAR(30) NULL,
+  CodigoTblUtil VARCHAR(30) NULL,
+  PRIMARY KEY(CodigoStatus)
+);

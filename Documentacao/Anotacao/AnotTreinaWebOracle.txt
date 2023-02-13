@@ -1,0 +1,109 @@
+Curso banco de dados oracle - Adailtom
+
+iniciado 04/12/2019
+
+senhas para o banco de dados sys e system
+
+usuario teste
+senha teste
+
+outro usuario
+usuario: treinaweb 
+senha: treinaweb
+
+usuario: luis
+senha: teste
+
+Tradução
+
+Schema  = esquemas
+Grid = Grade 
+Tuplas = Linhas
+Key = Chave
+Foreign = estrangeira
+Large = largo, extenso
+Object = Objeto
+
+
+
+Base sobre bancos de dados. (Comandos SQL sempre maiusculo)
+
+Banco de dados relacional é um banco com uma coleção de relacionamentos:
+Informalmente cada tabela representa uma relação.
+Cada linha representa uma coleção de relacionamentos.
+Conceitualmente o banco de dados utiiza as tabelas para reprentar as entidades e as colunas
+para representar os atributos.
+As linhas são conhecidas como tuplas.
+
+Conectar ao banco de dados via linha de comando
+conn sys/oracle as sysdba (Efetuando o login no banco de dados via linha de comando com o usuario sys)
+
+Conceder todos os privilegios ao usuario Luis
+GRANT ALL PRIVILEGES TO treinaweb; (Este e o usuario do banco de dados para conexção)
+ Logar com o usuario treinaweb via linha de comando
+ conn treinaweb/oracle as sysdba
+ 
+Criar um usuario via linha de comando
+ CREATE USER userteste IDENTIFIED BY teste
+ DEFAULT TABLESPACE users
+ QUOTA UNLIMITED ON users;
+ 
+Dar previlegio de conexão ao novo usuario;
+GRANT CONNECT TO userteste;
+
+Excluir o usuario 
+DROP USER userteste;
+
+Conectando via linha de comando
+CONNECT userteste/teste;
+ DISCONNECT - para desconectar o usuario;
+ 
+ Tipos de dados suportado pelo Oracle está na pagina 18 da apostila.
+ 
+ Criando tabela no banco de dados via comando
+ CREATE TABLE nome_tabela(
+ 	      nome_coluna1 [Tipodado],
+ 	      nome_coluna2 [Tipodado]);
+ 	      
+Exemplo abaixo do sql de criação de uma tabela.
+CREATE table "FUNCIONARIOS" (
+    "CODIGO_FUNCIONARIO" NUMBER NOT NULL,
+    "CPF"                CHAR(11),
+    "NOME"               VARCHAR2(60) NOT NULL,
+    "SALARIO"            NUMBER(10,2),
+    "DEPARTAMENTO"       VARCHAR2(60),
+    constraint  "FUNCIONARIOS_PK" primary key ("CODIGO_FUNCIONARIO")
+)
+/
+--Aqui foi adicionada uma contraint para verificar o salario e não permitir valores igual ou menor que zero.
+alter table "FUNCIONARIOS" add
+constraint "FUNCIONARIOS_CK1" 
+check (salario > 0)
+/
+
+Outro exemplo de criação de tabela
+CREATE TABLE cidade (
+             codigo_cidade INT NOT NULL,
+             nome VARCHAR (50) NOT NULL,
+             uf   VARCHAR (2) NOT NULL,
+             taxa NUMBER (10,2) NOT NULL,
+        PRIMARY KEY (codigo_cidade) );
+        
+Contraints serve para validar a inserção de dados no banco.
+ Os tipos de contrants estão na pagina da apostila 25.
+
+Chaves estrangeiras (Foreing keys) são criadas após a criação da tabela e definação da chave primaria (primary key).
+
+Excluir uma coluna da tabela
+ ALTER TABLE cliente DROP COLUNM campo1;
+
+Excluir uma tabela
+ DROP TABLE produtos;
+ 
+Sinônimos 
+Cria apelidos para acessar objetos com o noem muito longo.
+
+CREATE SYNONYM cid  FOR  cidade;
+
+View (Visões)
+É uma forma particular de visualizar dados e uma ou mais tabelas.

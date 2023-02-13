@@ -1,0 +1,84 @@
+-- Tabela Status
+INSERT INTO tblStatus (descricao_Status, situacao_Status) VALUES ('Ativo', 'A');
+INSERT INTO tblStatus (descricao_Status, situacao_Status) VALUES ('Inatvo', 'A');
+INSERT INTO tblStatus (descricao_Status, situacao_Status) VALUES ('Excluido', 'A');
+INSERT INTO tblStatus (descricao_Status, situacao_Status) VALUES ('Afastado', 'I');
+
+-- Tabela tipo Pessoa 
+INSERT INTO tblTipoPessoa (descricao_TipoPessoa, sigla_TipoPessoa, idStatus_TipoPessoa) VALUES ('Pessoa Física', 'PF', '1');
+INSERT INTO tblTipoPessoa (descricao_TipoPessoa, sigla_TipoPessoa, idStatus_TipoPessoa) VALUES ('Pessoa Juridica', 'PJ', '1');
+INSERT INTO tblTipoPessoa (descricao_TipoPessoa, sigla_TipoPessoa, idStatus_TipoPessoa) VALUES ('Micro Empreendedor individual', 'MEI', '1');
+
+-- Tabela tipo Sexo
+INSERT INTO tblTipoSexo (descricao_TipoSexo, sigla_TipoSexo, idStatus_TipoSexo) VALUES ('Masculino', 'M', '1');
+INSERT INTO tblTipoSexo (descricao_TipoSexo, sigla_TipoSexo, idStatus_TipoSexo) VALUES ('Femenino', 'F', '1');
+
+-- Tabela tipo Contato
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Recado', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Escritorio', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Fazenda', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Residencial', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Mãe', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Pai', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Irmão', '1');
+INSERT INTO tblTipoContato (descricao_TipoContato, idStatus_TipoContato) VALUES ('Parente', '1');
+
+-- Tabela Tipo Logradouro
+INSERT INTO tblTipoLogradouro (descricao_TipoLogradouro, status_TipoLogradouro) VALUES ('Rua', '1');
+INSERT INTO tblTipoLogradouro (descricao_TipoLogradouro, status_TipoLogradouro) VALUES ('Avenida', '1');
+INSERT INTO tblTipoLogradouro (descricao_TipoLogradouro, status_TipoLogradouro) VALUES ('Alameda', '1');
+INSERT INTO tblTipoLogradouro (descricao_TipoLogradouro, status_TipoLogradouro) VALUES ('Beco', '1');
+
+-- Tabela Tipo Telefone
+INSERT INTO tblTipoTelefone (descricao_TipoTelefone, status_TipoTelefone) VALUES ('Residencial', '1');
+INSERT INTO tblTipoTelefone (descricao_TipoTelefone, status_TipoTelefone) VALUES ('Comercial', '1');
+INSERT INTO tblTipoTelefone (descricao_TipoTelefone, status_TipoTelefone) VALUES ('Recado', '1');
+INSERT INTO tblTipoTelefone (descricao_TipoTelefone, status_TipoTelefone) VALUES ('Fazenda', '1');
+
+-- Tabela Tipo Empresa
+INSERT INTO tblTipoEmpresa (descricao_TipoEmpresa, status_TipoEmpresa) VALUES ('Matriz', '1');
+INSERT INTO tblTipoEmpresa (descricao_TipoEmpresa, status_TipoEmpresa) VALUES ('Filial', '1');
+INSERT INTO tblTipoEmpresa (descricao_TipoEmpresa, status_TipoEmpresa) VALUES ('PAC', '1');
+
+-- Tabelas Estado UF
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Acre', 'AC', 'Localizado na Região Norte');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Alagoas', 'AL', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Amapá', 'AP', 'Localizado na Região Norte');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Amazonas', 'AM', 'Localizado na Região Norte');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Bahia', 'BA', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Ceará', 'CE', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Distrito Federal', 'DF', 'Localizado na Região Centro-Oeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Espírito Santo', 'ES', 'Localizado na Região Sudeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Goiás', 'GO', 'Localizado na Região Centro-Oeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Maranhão', 'MA', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Mato Grosso', 'MT', 'Localizado na Região Centro-Oeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Mato Grosso do Sul', 'MS', 'Localizado na Região Centro-Oeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Minas Gerais', 'MG', 'Localizado na Região Sudeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Pará', 'PA', 'Localizado na Região Norte');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Paraíba', 'PB', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Paraná', 'PR', 'Localizado na Região Sul');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Pernambuco', 'PE', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Piauí', 'PI', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Rio de Janeiro', 'RJ', 'Localizado na Região Sudeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Rio Grande do Norte', 'RN', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Rio Grande do Sul', 'RS', 'Localizado na Região Sul');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Rondônia', 'RO', 'Localizado na Região Norte');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Roraima', 'RR', 'Localizado na Região Norte');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Santa Catarina', 'SC', 'Localizado na Região Sul');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('São Paulo', 'SP', 'Localizado na Região Sudeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Sergipe', 'SE', 'Localizado na Região Nordeste');
+INSERT INTO tblestados (descricao_Estados, UF_Estados, regiao_Estados) VALUES ('Tocantins', 'TO', 'Localizado na Região Norte');
+
+-- Tabela Proprietario do Sistema
+INSERT INTO tblProprietario (razaoSocial_Proprietario, nomeFantasia_Proprietario, CNPJ_Proprietario, idTipoEmpresa_Proprietario,
+idFilial_Proprietario, idStatus_Proprietario) VALUES ('Watanabe & Hilgemberg SA', 'Oficina W H','03.983.645/0001-80', '1','0','1');
+INSERT INTO tblProprietario (razaoSocial_Proprietario, nomeFantasia_Proprietario, CNPJ_Proprietario, idTipoEmpresa_Proprietario,
+idFilial_Proprietario, idStatus_Proprietario) VALUES ('Watanabe & Hilgemberg SA', 'Oficina W H','03.983.645/0001-80', '2','1','1');
+
+-- Tabela de E_mail com os dados do email da empresa
+INSERT INTO tblEmail (idTabela_Email, idDono_Email, Email, observacao_Email) VALUES ('tblProprietario', '1', 'suporteglpihilgemberg@gmail.com', 'Matriz');
+INSERT INTO tblEmail (idTabela_Email, idDono_Email, Email, observacao_Email) VALUES ('tblProprietario', '2', 'suporteglpihilgemberg@gmail.com', 'Filial 01');
+
+-- Tabela Telefone da empresa 
+INSERT INTO tblTelefoneFixo (idTabela_TelefoneFixo, idDono_TelefoneFixo, nu_TelefoneFixo, idTipo_TelefoneFixo, idstatus_TelefoneFixo) VALUES ('tblProprietario', '1', '06634980571', '2', '1');
+INSERT INTO tblTelefoneFixo (idTabela_TelefoneFixo, idDono_TelefoneFixo, nu_TelefoneFixo, idTipo_TelefoneFixo, idstatus_TelefoneFixo) VALUES ('tblProprietario', '2', '06634980571', '2', '1');
