@@ -102,3 +102,12 @@ os seus codigos estão na maquina.
 	
 17 - Endereço do repositorio web
 	https://github.com/Hilgemberg/Software.git
+
+18 - Apagar uma pasta do git
+18.1 - Apagar os arquivos de dentro da pasta 
+18.2 - git rm -rf --cached NomePasta (Neste ponto a pasta ainda existe)
+18.3 - inserir a pasta no gitignore echo NomePasta > .gitignore
+18.4 - git add .gitignore 
+18.5 - git commit -m 'Nomedopasta'
+18.6 - git push origin master
+18.7 - ls -a
