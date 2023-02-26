@@ -10,7 +10,7 @@ $pag = @$_GET["pag"];
     $menu4 = "../painel-clientePF/clientePF";
     $menu5 = "../painel-clientePJ/clientePJ";
     $menu6 = "menu6";
-   $menu7 = "menu7";
+   $menu7 = "../Contas-Pagar/contaspagar";
   $menu8 = "menu8";
  $menu9 = "menu9";
 $menu10 = "menu10";
@@ -119,7 +119,7 @@ $menu10 = "menu10";
        <h6 class="collapse-header"> Controle de contas </h6>
       <a class="collapse-item" href="index.php?pag=<?php echo $menu6 ?>"> Contas a Receber </a>
      <a class="collapse-item" href="index.php?pag=<?php echo $menu7 ?>"> Contas a Pagar </a>
-    <a class="collapse-item" href="index.php?pag=<?php echo $menu8 ?>"> Menu 5 </a>
+    <a class="collapse-item" href="index.php?pag=<?php echo $menu8 ?>"> Menu 8 </a>
    </div>
   </div>
  </li>
@@ -138,9 +138,9 @@ $menu10 = "menu10";
      <!-- Neste ponto alteramos dois locais para indicar que o menu é outro. id="collapse = Nome do menu" e aria-labelledby="heading + Nome do Menu" -->
       <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header"> Dados Menu: </h6>
-     <a class="collapse-item" href="index.php?pag=<?php echo $menu9 ?>">Menu 6</a>
-    <a class="collapse-item" href="index.php?pag=<?php echo $menu10 ?>">Menu 7</a>
-   <a class="collapse-item" href="index.php?pag=<?php echo $menu11 ?>">Menu 8</a>
+     <a class="collapse-item" href="index.php?pag=<?php echo $menu9 ?>">Menu 9</a>
+    <a class="collapse-item" href="index.php?pag=<?php echo $menu10 ?>">Menu 10</a>
+   <a class="collapse-item" href="index.php?pag=<?php echo $menu11 ?>">Menu 11</a>
   </div>
  </div>
 </li>
@@ -151,7 +151,7 @@ $menu10 = "menu10";
 <hr class="sidebar-divider">
  <div class="sidebar-heading"> Menu 04 </div>
   <li class="nav-item">
-   <a class="nav-link" href="index.php?pag=<?php echo $menu6 ?>">
+   <a class="nav-link" href="index.php?pag=<?php echo $menu12 ?>">
   <i class="fa fa-quora" aria-hidden="true"></i>
  <span> Dados Menu: </span></a>
 </li>
