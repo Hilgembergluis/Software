@@ -7,7 +7,7 @@ $url ="http://localhost/sistemas/oficina/sistemas/";
 
 //bloco utilizado para coonfigurar as variaveis do sistema referente as dados da empresa
 $nome_empresa = "Oficina Mêcanica Hilgemberg";
- $endereco_empresa = "Rua Londrina, 422, Centro, Primavera do Leste, MT";
+ $endereco_empresa = "AvenidaMinas Gerais, 565, Centro, Primavera do Leste, MT";
   $telefone_empresa = "(66) 9 9975-4921";
    $email_empresa_adm = "suportehilgemberglglpi@gmail.com";
 
