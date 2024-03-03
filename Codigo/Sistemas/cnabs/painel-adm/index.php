@@ -6,7 +6,7 @@
 $pag = @$_GET["pag"];
  $menu1 = "../cnab240/cnab240";
   $menu2 = "../cnab400/cnab400";
-   $menu3 = "menu3";
+   $menu3 = "../cnab400/cnab401";
     $menu4 = "menu4";
     $menu5 = "menu5";
     $menu6 = "menu6";
@@ -93,7 +93,7 @@ $menu10 = "menu10";
            <a class="collapse-item" href="index.php?pag=<?php echo $menu1 ?>"> cnab240 </a> <!-- Item do menu que tem referencia a Pessoa Fisica -->         
             <h6 class="collapse-header"> Layout 400: </h6>  <!-- Collapsed Header = Cabeçalho recolhido, indica o que vai aparecer no subcabeçalho do menu -->
            <a class="collapse-item" href="index.php?pag=<?php echo $menu2 ?>"> cnab400 </a> <!-- Item do menu recolhido que tem referencia a recepcionista -->
-          <a class="collapse-item" href="index.php?pag=<?php echo $menu3 ?>"> Mecânicos </a> <!-- Item do menu recolhido que tem referencia ao mecânico -->
+          <a class="collapse-item" href="index.php?pag=<?php echo $menu3 ?>"> cnab401 </a> <!-- Item do menu recolhido que tem referencia ao mecânico -->
          <!--Comando para criar itens do menu com separação por cabeçalho  -->
         
        <h6 class="collapse-header"> Clientes: </h6> <!-- Collapsed header = Cabeçalho recolhido, indica o que vai aparecer no subcabeçalho do menu -->
